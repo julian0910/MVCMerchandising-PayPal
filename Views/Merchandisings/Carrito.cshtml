@@ -1,0 +1,48 @@
+﻿@model MVCMerchandising.Models.Producto
+
+@{
+    ViewData["Title"] = "Carrito";
+}
+
+
+<h1>Carrito de Compras</h1>
+
+<div>
+    <h4>Merchandising</h4>
+    <dl class="row">
+                <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Productos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Productos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Talles)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Talles)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Carrito" asp-route-id="@Model.Id">Añadir al carrito</a> |
+    <a asp-action="Index">Volver a la Tienda</a>
+</div>
